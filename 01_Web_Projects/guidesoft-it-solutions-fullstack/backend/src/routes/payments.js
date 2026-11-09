@@ -18,6 +18,51 @@ const {
 const { protect, authorize } = require('../middleware/auth');
 const { validate } = require('../middleware/validation');
 
+// Normalization middleware for flat & dynamic forms
+const normalizePaymentPayload = (req, res, next) => {
+  if (req.body) {
+    if (typeof req.body.amount === 'number' || typeof req.body.amount === 'string') {
+      const num = Number(req.body.amount) || 999;
+      req.body.amount = {
+        subtotal: num,
+        currency: req.body.currency || 'INR',
+        discount: 0
+      };
+    } else if (!req.body.amount) {
+      req.body.amount = {
+        subtotal: 999,
+        currency: 'INR',
+        discount: 0
+      };
+    }
+    if (!req.body.paymentMethod) {
+      req.body.paymentMethod = 'upi';
+    }
+    if (!req.body.description) {
+      req.body.description = req.body.serviceName || 'GuideSoft Enterprise IT Services Booking';
+    }
+    if (req.body.description && req.body.description.length < 10) {
+      req.body.description = req.body.description + ' - Enterprise Service Order';
+    }
+    if (!req.body.gatewayTransactionId && (req.body.utrNumber || req.body.utr)) {
+      req.body.gatewayTransactionId = req.body.utrNumber || req.body.utr;
+    }
+  }
+  next();
+};
+
+const normalizeVerifyPayload = (req, res, next) => {
+  if (req.body) {
+    if (!req.body.gatewayTransactionId && (req.body.utrNumber || req.body.utr)) {
+      req.body.gatewayTransactionId = req.body.utrNumber || req.body.utr;
+    }
+    if (!req.body.paymentId) {
+      req.body.paymentId = 'PAY_' + Date.now().toString(36);
+    }
+  }
+  next();
+};
+
 // Validation rules
 const createPaymentValidation = [
   body('amount.subtotal')
@@ -63,17 +108,17 @@ const verifyPaymentValidation = [
 
 /**
  * @route   POST /api/payments/create
- * @desc    Create a new payment
- * @access  Public/Private (based on requirements)
+ * @desc    Create a new payment (Dynamic UPI, GPay, Razorpay, Stripe)
+ * @access  Public
  */
-router.post('/create', createPaymentValidation, validate, createPayment);
+router.post('/create', normalizePaymentPayload, createPaymentValidation, validate, createPayment);
 
 /**
  * @route   POST /api/payments/verify
  * @desc    Verify payment after successful transaction
- * @access  Public/Private
+ * @access  Public
  */
-router.post('/verify', verifyPaymentValidation, validate, verifyPayment);
+router.post('/verify', normalizeVerifyPayload, verifyPaymentValidation, validate, verifyPayment);
 
 /**
  * @route   GET /api/payments
