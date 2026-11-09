@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* GuideSoft Solutions Professional Color System */
+    --background: 0 0% 100%;
+    --foreground: 210 11% 15%; /* #1f2937 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 11% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 11% 15%;
+
+    /* Primary Blue Theme */
+    --primary: 217 91% 40%; /* #0066CC */
+    --primary-hover: 217 91% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary Green Theme */
+    --secondary: 158 64% 52%; /* #10b981 */
+    --secondary-hover: 158 64% 47%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Accent Orange Theme */
+    --accent: 38 92% 50%; /* #f59e0b */
+    --accent-hover: 38 92% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 210 40% 98%; /* #f9fafb */
+    --muted-foreground: 215 16% 47%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 40%;
+
+    /* Corporate Design Tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(217 91% 40%) 0%, hsl(217 91% 50%) 100%);
+    --section-gradient: linear-gradient(180deg, hsl(210 40% 98%) 0%, hsl(0 0% 100%) 100%);
+    --card-shadow: 0 4px 6px -1px hsl(220 13% 91% / 0.1), 0 2px 4px -1px hsl(220 13% 91% / 0.06);
+    --card-shadow-hover: 0 20px 25px -5px hsl(217 91% 40% / 0.1), 0 10px 10px -5px hsl(217 91% 40% / 0.04);
+    
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode for professional IT company */
+    --background: 210 11% 7%; /* #111827 */
+    --foreground: 0 0% 100%;
+
+    --card: 210 11% 11%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 210 11% 11%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 217 91% 50%;
+    --primary-hover: 217 91% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 158 64% 52%;
+    --secondary-hover: 158 64% 57%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 38 92% 50%;
+    --accent-hover: 38 92% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 210 11% 15%;
+    --muted-foreground: 215 16% 65%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 11% 20%;
+    --input: 210 11% 20%;
+    --ring: 217 91% 50%;
+
+    --hero-gradient: linear-gradient(135deg, hsl(210 11% 7%) 0%, hsl(210 11% 15%) 100%);
+    --section-gradient: linear-gradient(180deg, hsl(210 11% 11%) 0%, hsl(210 11% 7%) 100%);
+    --card-shadow: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+    --card-shadow-hover: 0 20px 25px -5px hsl(0 0% 0% / 0.4), 0 10px 10px -5px hsl(0 0% 0% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Hero Section */
+  .hero-section {
+    background: var(--hero-gradient);
+    @apply relative overflow-hidden;
+  }
+  
+  .hero-section::before {
+    content: '';
+    @apply absolute inset-0 bg-black/10;
+  }
+  
+  /* Section Backgrounds */
+  .section-light {
+    background: var(--section-gradient);
+  }
+  
+  /* Card Styles */
+  .card-elevated {
+    box-shadow: var(--card-shadow);
+    @apply transition-all duration-300;
+  }
+  
+  .card-elevated:hover {
+    box-shadow: var(--card-shadow-hover);
+    @apply -translate-y-1;
+  }
+  
+  /* Button Styles */
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-hover text-primary-foreground font-medium px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary-hover text-secondary-foreground font-medium px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-accent {
+    @apply bg-accent hover:bg-accent-hover text-accent-foreground font-medium px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-medium px-8 py-3 rounded-lg transition-all duration-300;
+  }
+  
+  /* Navigation */
+  .nav-link {
+    @apply text-foreground hover:text-primary transition-colors duration-200 font-medium;
+  }
+  
+  /* Mega Menu */
+  .mega-menu {
+    @apply absolute top-full left-0 w-full bg-card shadow-2xl border-t-4 border-primary opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50;
+  }
+  
+  /* Typography */
+  .heading-1 {
+    @apply text-5xl md:text-6xl font-bold leading-tight;
+  }
+  
+  .heading-2 {
+    @apply text-3xl md:text-4xl font-bold leading-tight;
+  }
+  
+  .heading-3 {
+    @apply text-2xl md:text-3xl font-semibold leading-tight;
+  }
+  
+  /* Animations */
+  .fade-up {
+    @apply transform translate-y-8 opacity-0 transition-all duration-700;
+  }
+  
+  .fade-up.visible {
+    @apply translate-y-0 opacity-100;
+  }
+}

@@ -1,0 +1,1 @@
+export { default as StructuredData, JsonLd } from './StructuredData';

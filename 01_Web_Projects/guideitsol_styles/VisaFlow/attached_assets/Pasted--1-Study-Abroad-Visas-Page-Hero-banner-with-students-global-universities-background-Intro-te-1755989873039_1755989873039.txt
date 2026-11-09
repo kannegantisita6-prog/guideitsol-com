@@ -1,0 +1,55 @@
+
+1. Study Abroad Visas Page
+* Hero banner with students & global universities background.
+* Intro text: 'Achieve your dreams with the right study visa guidance.'
+* Key benefits (top universities, smooth process, visa approval support).
+* Step-by-step process timeline (Application → Admission → Visa → Travel).
+* Required documents checklist.
+* FAQ section (accordion style).
+* Call-to-Action: 'Apply for Study Visa' button with form.
+
+2. Work & Business Visas Page
+* Hero banner (professionals & business meeting theme).
+* Section for Skilled Worker Visas and Business/Investor Visas.
+* Process: Job offer / Business plan → Documentation → Visa Approval.
+* Success stories from professionals.
+* Required documents section (work contract, invitation letter, financial proof).
+* CTA: 'Start Your Work Visa Application'.
+
+3. Travel & Tourism Visas Page
+* Hero section with travel/holiday destination imagery.
+* Highlight short-term tourist, family visit, and transit visas.
+* Benefits: Quick approval, multiple destinations, family-friendly support.
+* Step-by-step guide: Application → Documents → Travel.
+* Gallery/slider with popular destinations.
+* CTA: 'Apply for Tourist Visa'.
+
+4. Visa Extension & Renewal Page
+* Hero banner with airport/travel extension theme.
+* Intro text: 'Extend your stay without stress.'
+* List of extension/renewal options (Student, Work, Tourist).
+* Process: Current visa check → Renewal application → Approval.
+* Required documents checklist.
+* CTA: 'Request Extension/Renewal' form.
+
+5. Document Verification & Attestation Page
+* Hero banner with official/legal theme.
+* Services: Document Authentication, Embassy Attestation, Translation Support.
+* List of supported documents (Educational, Business, Legal, Identity).
+* Process timeline: Submission → Verification → Attestation → Delivery.
+* Trust badges (secure, government-recognized).
+* CTA: 'Get Your Documents Verified'.
+
+6. Immigration Consultation Page
+* Hero banner (family immigrating / passport & globe theme).
+* Intro: 'Expert guidance for permanent residency & immigration success.'
+* Services offered: PR Applications, Green Card Support, Citizenship Guidance.
+* Consultation process (Assessment → Strategy → Application → Settlement).
+* Testimonials from successful immigrants.
+* CTA: 'Book a Free Consultation'.
+
+Design Style
+* Global + professional look (blue, white, gold palette).
+* Rounded cards, soft shadows, subtle animations.
+* Responsive layout for mobile/tablet/desktop.
+* Clean typography (Poppins/Inter).

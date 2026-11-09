@@ -1,0 +1,23 @@
+HTTrack3.49-2+htsswf+htsjava launched on Fri, 19 Sep 2025 23:29:07 at https://blackberrybd.com/creative-soft/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qYC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" -Y https://blackberrybd.com/creative-soft/ -O1 "C:\Users\LENOVO\Desktop\sonali\guidesoft Final Version" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+23:29:44	Error: 	"Forbidden" (403) at link https://codecanyon.net/item/creativesoft-software-development-and-it-service-html5-template/51281270 (from https://blackberrybd.com/creative-soft/)
+23:30:32	Error: 	"Not Found" (404) at link https://blackberrybd.com/creative-soft/mystudio/service_detail.htmls (from https://blackberrybd.com/creative-soft/)
+23:31:14	Error: 	"Not Found" (404) at link https://blackberrybd.com/creative-soft/assets/css/owl.video.play.png (from https://blackberrybd.com/creative-soft/assets/css/owl.carousel.min.css)
+23:31:39	Error: 	"Not Found" (404) at link https://blackberrybd.com/creative-soft/mystudio/assets/css/owl.video.play.png (from https://blackberrybd.com/creative-soft/mystudio/assets/css/owl.carousel.min.css)
+23:31:42	Error: 	"Not Found" (404) at link https://blackberrybd.com/creative-soft/mystudio/assets/css/images/ui-icons_444444_256x240.png (from https://blackberrybd.com/creative-soft/mystudio/assets/css/jquery-ui.min.css)
+23:31:42	Error: 	"Not Found" (404) at link https://blackberrybd.com/creative-soft/mystudio/assets/css/images/ui-icons_555555_256x240.png (from https://blackberrybd.com/creative-soft/mystudio/assets/css/jquery-ui.min.css)
+23:31:42	Error: 	"Not Found" (404) at link https://blackberrybd.com/creative-soft/mystudio/assets/css/images/ui-icons_ffffff_256x240.png (from https://blackberrybd.com/creative-soft/mystudio/assets/css/jquery-ui.min.css)
+23:31:42	Error: 	"Not Found" (404) at link https://blackberrybd.com/creative-soft/mystudio/assets/css/images/ui-icons_777620_256x240.png (from https://blackberrybd.com/creative-soft/mystudio/assets/css/jquery-ui.min.css)
+23:31:42	Error: 	"Not Found" (404) at link https://blackberrybd.com/creative-soft/mystudio/assets/css/images/ui-icons_cc0000_256x240.png (from https://blackberrybd.com/creative-soft/mystudio/assets/css/jquery-ui.min.css)
+23:31:42	Error: 	"Not Found" (404) at link https://blackberrybd.com/creative-soft/mystudio/assets/css/images/ui-icons_777777_256x240.png (from https://blackberrybd.com/creative-soft/mystudio/assets/css/jquery-ui.min.css)
+23:31:42	Error: 	"Not Found" (404) at link https://blackberrybd.com/creative-soft/mystudio/assets/css/mCSB_buttons.png (from https://blackberrybd.com/creative-soft/mystudio/assets/css/jquery.mCustomScrollbar.css)
+23:31:42	Error: 	"Not Found" (404) at link https://blackberrybd.com/creative-soft/mystudio/assets/images/ui/wave.svg (from https://blackberrybd.com/creative-soft/mystudio/assets/css/style.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 2 minutes 35 seconds : 447 links scanned, 433 files written (61965577 bytes overall) [55307499 bytes received at 356822 bytes/sec], 10046763 bytes transferred using HTTP compression in 95 files, ratio 32%, 17.8 requests per connection
+(12 errors, 0 warnings, 0 messages)

@@ -1,0 +1,75 @@
+;;
+;; Domain:     guideitsol.com.
+;; Exported:   2025-10-21 07:52:15
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+guideitsol.com	3600	IN	SOA	brady.ns.cloudflare.com. dns.cloudflare.com. 2051269973 10000 2400 604800 3600
+
+;; NS Records
+guideitsol.com.	86400	IN	NS	brady.ns.cloudflare.com.
+guideitsol.com.	86400	IN	NS	mariah.ns.cloudflare.com.
+
+;; A Records
+apps.guideitsol.com.	1	IN	A	190.92.174.127 ; cf_tags=cf-proxied:true
+autoconfig.guideitsol.com.	1	IN	A	190.92.174.127 ; cf_tags=cf-proxied:true
+autodiscover.guideitsol.com.	1	IN	A	190.92.174.127 ; cf_tags=cf-proxied:true
+coolify.guideitsol.com.	1	IN	A	72.60.97.201 ; cf_tags=cf-proxied:true
+cpanel.guideitsol.com.	1	IN	A	190.92.174.127 ; cf_tags=cf-proxied:true
+cpcalendars.guideitsol.com.	1	IN	A	190.92.174.127 ; cf_tags=cf-proxied:true
+cpcontacts.guideitsol.com.	1	IN	A	190.92.174.127 ; cf_tags=cf-proxied:true
+ftp.guideitsol.com.	1	IN	A	190.92.174.127 ; cf_tags=cf-proxied:true
+guideitsol.com.	1	IN	A	72.60.97.201 ; cf_tags=cf-proxied:true
+guideitsol.com.	1	IN	A	190.92.174.127 ; cf_tags=cf-proxied:true
+webdisk.guideitsol.com.	1	IN	A	190.92.174.127 ; cf_tags=cf-proxied:true
+webmail.guideitsol.com.	1	IN	A	190.92.174.127 ; cf_tags=cf-proxied:true
+whm.guideitsol.com.	1	IN	A	190.92.174.127 ; cf_tags=cf-proxied:true
+
+;; CNAME Records
+mail.guideitsol.com.	1	IN	CNAME	guideitsol.com. ; cf_tags=cf-proxied:true
+www.guideitsol.com.	1	IN	CNAME	guideitsol.com. ; cf_tags=cf-proxied:true
+
+;; MX Records
+guideitsol.com.	1	IN	MX	0 guideitsol.com.
+
+;; NS Records
+guideitsol.com.	1	IN	NS	ns1.mysecurecloudhost.com.
+guideitsol.com.	1	IN	NS	ns2.mysecurecloudhost.com.
+guideitsol.com.	1	IN	NS	ns3.mysecurecloudhost.com.
+
+;; SRV Records
+_autodiscover._tcp.guideitsol.com.	1	IN	SRV	0 0 443 cpanelemaildiscovery.cpanel.net.
+_caldavs._tcp.guideitsol.com.	1	IN	SRV	0 0 2080 guideitsol.com.
+_caldav._tcp.guideitsol.com.	1	IN	SRV	0 0 2079 guideitsol.com.
+_carddavs._tcp.guideitsol.com.	1	IN	SRV	0 0 2080 guideitsol.com.
+_carddav._tcp.guideitsol.com.	1	IN	SRV	0 0 2079 guideitsol.com.
+
+;; TXT Records
+_caldavs._tcp.guideitsol.com.	1	IN	TXT	"path=/"
+_caldav._tcp.guideitsol.com.	1	IN	TXT	"path=/"
+_carddavs._tcp.guideitsol.com.	1	IN	TXT	"path=/"
+_carddav._tcp.guideitsol.com.	1	IN	TXT	"path=/"
+_cpanel-dcv-test-record.guideitsol.com.	1	IN	TXT	"_cpanel-dcv-test-record=6TN5EeGhKUEfpRz3X9KYYu5k3z3Yw8T1cA06P6pul1H3LHyFCGYRCYr_3VZqIalZ"
+default._domainkey.guideitsol.com.	1	IN	TXT	"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzY9Xqav4KAJX48qlOLn6iiMLk2ia5dyCGGaa4ctulyeZpGfsxAOA3XFYxqqsukcSvjvglkNErWAb4TyG7Xf8Q5RLtX2NXUcah8pr94eFGgif1cOPUmONZjZs+dbVNkOlAUFpRdsaFqM8XcRehlDPDpFaBJqkR/4Xv/l6ylfnBlD++jijlGBd/CJC7xc1I3mAW" "s55DniXik1gREGleomH7FTtxogMYLxLWRWLs7Ndmu+GtKQKAhi9sAS0stOe7JFKh4RrLVl3x77kWVQHM6LZCeXTjJ5oAF6NET/3cXef3kZO0QisEZvWqyZhiSIdfeNf0sAfafV3jHuCZiIxdYm4mQIDAQAB;"
+_dmarc.guideitsol.com.	1	IN	TXT	"v=DMARC1; p=none;"
+guideitsol.com.	1	IN	TXT	"fah-claim=002-02-16471c03-8964-48e8-9ef9-c1755afe7f51"

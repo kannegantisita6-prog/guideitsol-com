@@ -1,0 +1,61 @@
+name: GuideITSol CI Pipeline
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  backend-test:
+    name: Backend API & Auth Testing
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20.x, 22.x]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: '01_Web_Projects/guidesoft-it-solutions-fullstack/backend/package.json'
+
+      - name: Install Backend Dependencies
+        working-directory: 01_Web_Projects/guidesoft-it-solutions-fullstack/backend
+        run: npm ci || npm install
+
+      - name: Run Backend Test Suite
+        working-directory: 01_Web_Projects/guidesoft-it-solutions-fullstack/backend
+        env:
+          NODE_ENV: test
+          JWT_SECRET: ci-test-secret-guideitsol-2026
+          EMAIL_SKIP: 'true'
+        run: npm test
+
+  frontend-build:
+    name: Frontend Lint & Build Verification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+
+      - name: Install Frontend Dependencies
+        working-directory: 01_Web_Projects/guidesoft-it-solutions-fullstack/frontend
+        run: npm ci || npm install --legacy-peer-deps
+
+      - name: Build Next.js Application
+        working-directory: 01_Web_Projects/guidesoft-it-solutions-fullstack/frontend
+        env:
+          NEXT_PUBLIC_API_URL: https://guideitsol.com
+          NEXT_PUBLIC_APP_NAME: "GuideIT Solutions"
+        run: npm run build

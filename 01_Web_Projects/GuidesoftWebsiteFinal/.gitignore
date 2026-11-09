@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+*.log
+.env.local
+.env.*.local
+*.tar.gz
+dist/assets/*.map
+
+.vercel

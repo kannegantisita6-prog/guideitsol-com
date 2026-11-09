@@ -1,0 +1,67 @@
+You are a senior full-stack developer tasked with creating a comprehensive web application with role-based access control. Generate complete, production-ready code for a modern web application with the following specifications:
+
+**TECHNICAL REQUIREMENTS:**
+- Frontend: React.js with TypeScript, Tailwind CSS, and a modern component library (e.g., Shadcn/ui or Material-UI)
+- Backend: Node.js with Express.js and TypeScript
+- Database: PostgreSQL with Prisma ORM
+- Authentication: JWT-based with refresh tokens
+- File uploads: Multer with cloud storage integration
+- Real-time features: Socket.io for chat and notifications
+
+**AUTHENTICATION & AUTHORIZATION:**
+Implement 4 user roles with specific permissions:
+1. **Admin**: Full system access, user management, system settings
+2. **HR**: Employee management, recruitment, payroll access
+3. **Employee**: Personal dashboard, tasks, projects, limited CRM access
+4. **Candidate**: Job applications, interview scheduling, profile management
+
+**REQUIRED PAGES/MODULES:**
+1. Dashboard (role-specific widgets and analytics)
+2. Calendar (events, meetings, deadlines)
+3. Chat (real-time messaging with file sharing)
+4. Mailbox (internal messaging system)
+5. eCommerce (product catalog, orders, inventory)
+6. Projects (project management with Gantt charts)
+7. Tasks (task assignment and tracking)
+8. CRM (customer relationship management)
+9. Invoices (billing and payment tracking)
+10. Support Tickets (help desk system)
+11. File Manager (document storage and sharing)
+12. ToDo (personal task lists)
+13. Jobs (recruitment and applicant tracking)
+
+**DATABASE MODELS WITH SAMPLE DATA:**
+Create the following 10 models with realistic sample data (minimum 10 records each):
+1. Users (id, email, password, role, profile info)
+2. Employees (id, user_id, department, position, salary, hire_date)
+3. Students (id, user_id, course, enrollment_date, gpa)
+4. Projects (id, name, description, status, start_date, end_date, budget)
+5. Tasks (id, project_id, assignee_id, title, status, priority, due_date)
+6. Customers (id, name, email, company, phone, address)
+7. Invoices (id, customer_id, amount, status, issue_date, due_date)
+8. Tickets (id, user_id, title, description, status, priority, created_at)
+9. Expenses (id, user_id, category, amount, description, date)
+10. Events (id, title, description, start_time, end_time, attendees)
+
+**DELIVERABLES:**
+1. Complete project structure with all necessary files
+2. Database schema and migration files
+3. API endpoints with proper validation and error handling
+4. Frontend components with responsive design
+5. Authentication middleware and route protection
+6. Role-based UI rendering
+7. Sample data seeders for all models
+8. README with setup instructions
+9. Environment configuration examples
+
+**ADDITIONAL REQUIREMENTS:**
+- Implement proper error handling and validation
+- Add loading states and user feedback
+- Include search and filtering capabilities
+- Implement pagination for large datasets
+- Add export functionality (PDF, Excel) where relevant
+- Include basic analytics and reporting features
+- Ensure mobile responsiveness
+- Add proper logging and monitoring setup
+
+Provide the complete codebase with clear file organization, comprehensive comments, and production-ready practices including security measures, input validation, and performance optimizations.

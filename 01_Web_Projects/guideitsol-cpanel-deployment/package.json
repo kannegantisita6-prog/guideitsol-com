@@ -1,0 +1,30 @@
+{
+  "name": "guideitsol-production",
+  "version": "1.0.0",
+  "description": "GuideITSol.com - Production deployment package",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "prod": "NODE_ENV=production node index.js",
+    "test": "node test.cjs"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "nodemailer": "^6.9.7",
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "guideitsol",
+    "visa",
+    "immigration",
+    "consulting",
+    "technology"
+  ],
+  "author": "GuideITSol",
+  "license": "Private"
+}

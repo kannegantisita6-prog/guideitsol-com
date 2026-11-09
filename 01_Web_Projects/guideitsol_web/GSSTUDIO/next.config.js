@@ -1,0 +1,12 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: ['localhost', 'cloudinary.com', 'res.cloudinary.com'],
+  },
+  webpack: (config) => {
+    config.externals = [...config.externals, 'canvas', 'jsdom']
+    return config
+  },
+}
+
+module.exports = nextConfig

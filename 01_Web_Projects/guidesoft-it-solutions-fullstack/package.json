@@ -1,0 +1,21 @@
+{
+  "name": "guidesoft-it-solutions",
+  "version": "1.0.0",
+  "description": "Fullstack Web Application and Mobile App for Guidesoft IT Solutions",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run frontend:dev\" \"npm run backend:dev\"",
+    "frontend:dev": "cd frontend && npm run dev",
+    "backend:dev": "cd backend && npm run dev",
+    "mobile:dev": "cd mobile && npm run start",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install && cd ../mobile && npm install",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start"
+  },
+  "keywords": ["guidesoft", "it-solutions", "web-development", "mobile-app"],
+  "author": "Guidesoft IT Solutions",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

@@ -1,0 +1,18 @@
+.about-us-02-page {
+  padding-top: 100px;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.page-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.page-content p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}

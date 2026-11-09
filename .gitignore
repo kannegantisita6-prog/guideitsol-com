@@ -10,26 +10,34 @@ node_modules/
 */*/.next/
 */*/*/.next/
 
-# Large backup archives (>100MB)
-04_Project_Archives_and_Backups/Website_Build_Archives/
+# Large backup archives (>40MB)
+04_Project_Archives_and_Backups/
 *.tar.gz
 *.iso
+*.zip
+*.cdr
 
-# Logs & cache
+# Vercel & build cache
+.vercel/
+*/.vercel/
+*/*/.vercel/
+*/*/*/.vercel/
+dist/
+build/
+.cache/
+.expo/
+
+# Logs & temp
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 .pnpm-debug.log*
-.cache/
-.expo/
-dist/cache/
 
 # OS metadata
 Thumbs.db
 .DS_Store
 desktop.ini
 
-# Environment secret overrides (keep .env.example)
+# Environment secret overrides
 .env.local
 .env.*.local

@@ -1,0 +1,8 @@
+{
+  "buildCommand": "echo 'Skipping build' && exit 0",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
